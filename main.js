@@ -18,11 +18,11 @@
                         'With about 1.4 billion people, China is the most populated country', 
                         "Modric is the 2018 FIFA Ballon d'Or holder", 
                         "With recent discoveries, Pluto is no longer classified as a planet",
-                        "Envy is linked with Greed but Jealousy is linked with fear. You feel envy about something you don't own but want, but you feel jealous over something you already have but are scared to lose.", 
-                        "When compliment you admire (praise, appreciate); when you complement something you make it better (improve, add to it)",
                         "Yoke is some form of bondage, burden or limiting condition and should not be confused with Yolk the yellow inner part of an egg", 
                         "Illusive: think illusion (imaginery doesn't exist); Elusive: Think elude (Something you can't get)",
-                        "All together: all in one place, everything present or all here; Altogether: Completely, all things considered, on the whole. Now you know that Altogether is altogether different from all together"  
+                        "Recall BODMAS. So you should perform multiplication before Addition and subtraction. <br> 5 + 48 - 3 = 50",
+                        "Area = πr<sup>2</sup> => 154cm<sup>2</sup> = 22/7 * r<sup>2</sup> <br> => r = 7cm, D= 2*r =14cm <br> Perimeter = πD = 22/7 * 14cm = 44cm",
+                        "Observe the difference between nth term and n+1 term keeps increasing by 4 i.e. 3-2 = 1, 8-3 = 5, 17-8 = 9, 30-17=13, so the next difference should be 13 + 4 = 17. Hence, x => 30 + 17 = 47" 
                       ]
     
  let questions_temp = [   
@@ -32,12 +32,11 @@
                     ["Who was the 2018 Balon d'Or winner?","Messi","Ronaldo","Mbappe","Modric","D"],
                     ["Which is not a planet?","Pluto","Mercury","Saturn","None of the above","A"],
     
-                    ["Emeka is ___________ of his friend's new social status. Thoughts of losing his girlfriend to a wealthy suitor makes him _____________", "jealous, envious","envious, jealous", "jealous, jealous", "envious, envious", "B"],
-                    ["Pogba _____________ Kante's humility. He added, 'The french midfield worked so well because Kante and I __________ each other","Complimented, complemented", "Complemented, complimented", "complemented, complemented", "complimented, complimented", "A"],
-                    ["Some _________ are self-inflicted but with knowledge they can be crushed like egg ________", "yolks, yolks", "yolks, yokes", "yokes, yokes", "yokes, yolks", "D"],
+                    ["Some _________ are caused by ignorance but with knowledge they can be crushed like egg ________", "yolks, yolks", "yolks, yokes", "yokes, yokes", "yokes, yolks", "D"],
                     ["Efforts made by Science to find God have been __________. Hence, Science concludes that God is __________.", "elusive, illusive", "elusive, elusive","illusive, illusive", "illusive, ellusive", "A"],
-                    ["We went to church ____________. _____________, church was fantastic", "all together, All together", "altogether, Altogether", "altogether, All together", "all together, Altogether", "D"],
-                   
+                    ["Given this series 2, 3, 8, 17, 30, x. Find x?","43","59","45","47","D"],
+                    ["Evaluate 5 + 6 * 8 - 3", "50","85","35","55", "A"],
+                    ["Find the perimeter of a circle, if its area is 154cm<sup>2</sup>.","14cm","7cm","44cm","22cm","C"],
                 ]         
 
 
@@ -260,11 +259,11 @@ function endExam(){
         
         numQ.innerHTML = `<h4>Test Report</h4><br> `
 
-         qArea.innerHTML = `<p class="report-card"><span style="font-weight: bold;font-size: 2em; text-align:center">Score: ${report[0]}%<span>&nbsp[${report[1]}]</span>
+         qArea.innerHTML = `<p id="score" class="report-card"><span style="font-weight: bold;font-size: 2em; text-align:center">Score: ${report[0]}%<span>&nbsp[${report[1]}]</span>
                             </span></p>
-                            <p class="report-card"><span>You got <strong style="color:green;">${report[2]}</strong> correct, <strong style="color:red;">${report[3]}</strong> incorrect and 
-                            left <strong style="color:blue;">${report[4]}</strong> unanswered.</span></p> 
-                            <p class="report-card"><span>Test completed in <strong>${report[5]}</strong> seconds.</span></p>
+                            <p id="brk-down" class="report-card"><span>You got <strong style="color:green;">${report[2]}</strong> correct, <strong style="color:red;">${report[3]}</strong> incorrect and 
+                            left <strong style="color:blue;">${report[4]}</strong> blank.</span></p> 
+                            <p id="test-time" class="report-card"><span>Test completed in <strong>${report[5]}</strong> seconds.</span></p>
                             <div class="report-card" id="imageBox"></div>
                             <button id="review" class="review">Review</button>`
         

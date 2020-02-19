@@ -244,7 +244,7 @@ span.icon{
         top: 0;
         right: 12%;
     }
-    #next, .review, .back {
+    #next, .review, .back, .retake, .submit {
         top: 82%;
         left: 68%;
     }
@@ -258,6 +258,24 @@ span.icon{
         display: block;
         margin-left: 26%;
         font-size: 0.75em;
+    }
+    #score{
+        margin-top: 4px;
+        margin-bottom: 12px;
+    }
+    #brk-down{
+        margin-bottom: 8px;
+    }
+    #brk-down span{
+        font-size: 0.7rem;
+    }
+    #test-time{
+        margin-bottom: 0;
+        margin-top: 8px;
+        font-size: 0.7rem;
+    }
+    figcaption{
+        font-size: 0.9rem;
     }
 }
 
