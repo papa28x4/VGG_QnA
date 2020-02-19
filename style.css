@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.5em;
+}
+#main{
+    background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%);
+    min-height: 100vh;
+    display: grid;
+}
+#qArea{
+    background-color: #efefef;
+    min-height: 60%;
+    width: 60%;
+    margin: auto;
+    padding: 2%;
+    user-select: none;
+}
+li{
+    list-style: none;
+    
+}
+button{
+    cursor: pointer;
+}
+.instruction{
+    padding: 2.5% 0;
+}
+#numQ{
+    position: absolute;
+    color: rgb(209, 215, 221);
+    padding-left: 2%;
+    width: 100%;
+    top: 0;
+    right: 1%;
+    font-size: 200%;
+    text-align: center;
+}
+#numQ span{
+    font-size: 0.7em;
+}
+#next, .review, .back, .submit, .retake{
+    position: absolute;
+    top: 68%;
+    left: 68%;
+    padding: 1%;
+    color: rgb(31, 31, 82);
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+}
+.back{
+    top: 68%;
+    left: 58%;
+}
+#timer{
+    position: absolute;
+    display: none;
+    color: white;
+    right: 5%;
+    top: 5%;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;  
+}
+.error{
+    border: 2px solid red;
+}
+#timer span{
+    position: absolute;
+    display: inline-block;
+    right: 65%;
+    top: 15%;
+    width: 5%;
+    height: 5%;
+    font-size: 250%;
+}
+#timer.red span{
+    color: red;
+}
+#name, #subjects{
+    display: inline-block;
+    padding: 1% 2%;
+    margin: 10% 0 0 33%;
+    width: 30%;
+}
+#subjects{
+    margin-top: 0;
+}
+
+label.answer{
+    color: green;
+    font-weight: bold;
+    padding-right: 1%;
+    border: 2px solid green;
+    padding-bottom: 10px;
+    padding-top: 3px;
+}
+label.wrong{
+    color: red;
+    font-weight: bold;
+}
+span.icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.hit{
+    background: url('images/tick.png') no-repeat;
+    background-position: 0;
+    background-position-y: 5px;
+}
+.miss{
+    background: url('images/cross.png') no-repeat;
+    background-position: 0;
+    background-position-y: 5px;
+}
+#explanation{
+    position: absolute;
+    border: 1px solid blue;
+    width: 60%;
+    height: 15%;
+    left: 20%;
+    bottom: 2%;
+    background-color: #efefef;
+    padding: 1%;
+    display: none;
+}
+.report-card{
+    display:flex; 
+    justify-content: center;
+}
+
+
+/* */
+@keyframes click-wave {
+  0% {
+    height: 30px;
+    width: 30px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%);
+}
+.option-input:checked::before {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+/**/
+@media screen and (max-width: 550px) {
+    #qArea{
+            position: relative;
+            height: 60%;
+            width: 90%;
+            top: -5%;
+        }
+    #numQ{
+            margin-top: 0;
+        }
+    #timer{
+
+        width: 60px;
+        height: 60px;  
+    }
+
+    #timer span{
+        right: 65%;
+        top: 10%;
+        font-size: 180%;
+    }
+
+    #explanation{
+        position: absolute;
+        width: 95%;
+        height: auto;
+        left: 2.5%;
+        bottom: 0;
+        font-size: 0.85em;
+        overflow-y: scroll;
+    }
+    #numQ{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 12%;
+    }
+    #next, .review, .back {
+        top: 82%;
+        left: 68%;
+    }
+    .back{
+        left: 38%;
+    }
+    .instruction{
+        font-size: 0.9em;
+    }
+    .errMessage{
+        display: block;
+        margin-left: 26%;
+        font-size: 0.75em;
+    }
+}
+
+
+ 
