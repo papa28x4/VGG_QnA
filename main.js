@@ -125,7 +125,7 @@ function calcScore(){
     for(i=0; i<totalQ; i++){
         if(userResponses[i] === questions[i][5]){
             correct++;
-            console.log(userResponses[i], 'answer: ', questions[i][5])
+            
         }else{
             if(userResponses[i]){
                 incorrect++;
@@ -139,7 +139,7 @@ function calcScore(){
     let score = correct/totalQ * 100;
     let status = score >= 50? "Passed" : "Failed";
     const duration = timeAlloted - seconds;
-     // console.log(correct, incorrect, blank, score, status);
+    
     return [score, status, correct, incorrect, blank, duration];
 }
 function pageState(){
@@ -221,8 +221,6 @@ function displayTranslate(caption){
                
                 let html = `<figure><img class="images" src="${json.data.images.fixed_width_downsampled.url}"  alt="${json.data.title}">
                 <figCaption>${caption[1]}</figcaption></figure>`;
-                // console.log(json);
-                // console.log(json.data.images.fixed_width_downsampled)
                 const imageBox = document.querySelector('#imageBox');
                 imageBox.innerHTML = html;
             })
@@ -339,6 +337,3 @@ main.addEventListener('click', (e)=>{
         location.reload()
    }
 })
-
-
-//localStorage.clear();
