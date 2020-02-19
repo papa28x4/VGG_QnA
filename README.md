@@ -1,2 +1,2 @@
 # VGG_QnA
-DOM manipulation assignment to build a Quiz App
+DOM manipulation assignment - To build a Quiz App
