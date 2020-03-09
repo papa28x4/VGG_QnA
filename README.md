@@ -3,6 +3,7 @@ DOM manipulation assignment - To build a Quiz App
 
 **Features**
 
+- Next and Previous buttons
 - Local Storage for data persistence
 - A count down timer
 - Detailed Score's Report Page
